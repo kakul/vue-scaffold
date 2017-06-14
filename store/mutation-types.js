@@ -1,0 +1,4 @@
+const MUTATION_1 = "MUTATION_1"
+const MUTATION_2 = "MUTATION_2"
+
+export default { MUTATION_1, MUTATION_2 }
