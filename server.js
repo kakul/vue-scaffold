@@ -1,6 +1,5 @@
 const express = require('express')
 const webpack = require('webpack')
-const path = require('path')
 const isDevelopment = process.env.NODE_ENV !== 'production' 
 const webpackDevMiddleware = require('webpack-dev-middleware')
 const webpackHotMiddleware = require('webpack-hot-middleware')
@@ -11,7 +10,7 @@ const history = require('connect-history-api-fallback')
 
 if (isDevelopment) {
 	app.use(webpackDevMiddleware(compiler, {
-		publicPath: '/build/',
+		publicPath: '/',
 		filename: '[name].js',
 		chunkFilename: '[id].chunk.js',
 		stats: {
