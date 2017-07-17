@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
 	entry: './app.js',
@@ -38,6 +39,10 @@ module.exports = {
 		new webpack.NoEmitOnErrorsPlugin(),
 		new ExtractTextPlugin({
 			filename: 'app.css'
+		}),
+		new HtmlWebPackPlugin({
+			filename: 'index.html',
+			template: 'index-template.html'
 		})
 	]
 }

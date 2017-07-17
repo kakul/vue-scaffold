@@ -3,6 +3,7 @@ const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCssPlugin = require('optimize-css-assets-webpack-plugin')
+const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
 	entry: './app.js',
@@ -82,7 +83,11 @@ module.exports = {
   		new OptimizeCssPlugin({
   			assetNameRegExp: /app\.css$/,
   			canPrint: true
-  		})
+  		}),
+  		new HtmlWebPackPlugin({
+			filename: '../index.html',
+			template: 'index-template.html'
+		})
   	]
 }
 
