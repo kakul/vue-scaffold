@@ -12,3 +12,10 @@ A general usable template code for starting development using VueJS
  `npm run build:dev`
 3. To run `production` build:
  `npm run build:prod`
+
+##### To do
+1. Server side rendering build
+2. Fix for sourcemap
+3. Linter integration and configuration
+4. Express proxy middleware
+5. General plugin(service) creation guidelines
